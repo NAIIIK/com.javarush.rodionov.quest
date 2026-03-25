@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "text": "Ты у ворот замка. Они закрыты. Что предпримешь?",
+    "answers": [
+      { "id": 11, "text": "Сломаешь ворота", "questionId": 1, "nextQuestionId": 2, "result": null, "loseText": null},
+      { "id": 12, "text": "Осмотришься вокруг", "questionId": 1, "nextQuestionId": 3, "result": null, "loseText": null }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ты пытаешься сломать ворота…",
+    "answers": [
+      { "id": 21, "text": "Выбиваешь с ноги", "questionId": 2, "nextQuestionId": 4, "result": null, "loseText": null },
+      { "id": 22, "text": "Выбиваешь с плеча", "questionId": 2, "nextQuestionId": null, "result": "LOSE", "loseText": "Ты сломал плечо и не в состоянии продолжать" }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Ты находишь ключ в траве. Что дальше?",
+    "answers": [
+      { "id": 31, "text": "Открываешь ворота", "questionId": 3, "nextQuestionId": 4, "result": null, "loseText": null },
+      { "id": 32, "text": "Бросаешь ключ", "questionId": 3, "nextQuestionId": null, "result": "LOSE", "loseText": "Больше вариантов нет..." }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Внутри темно.",
+    "answers": [
+      { "id": 41, "text": "Идёшь вслепую", "questionId": 4, "nextQuestionId": null, "result": "LOSE", "loseText": "Ты упал в яму" },
+      { "id": 42, "text": "Ищешь источник света", "questionId": 4, "nextQuestionId": 5, "result": null, "loseText": null }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Ты находишь факел. Перед тобой два коридора.",
+    "answers": [
+      { "id": 51, "text": "Левый коридор", "questionId": 5, "nextQuestionId": 6, "result": null, "loseText": null },
+      { "id": 52, "text": "Правый коридор", "questionId": 5, "nextQuestionId": 7, "result": null, "loseText": null }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "В левом коридоре ловушка.",
+    "answers": [
+      { "id": 61, "text": "Пытаешься пройти", "questionId": 6, "nextQuestionId": null, "result": "LOSE", "loseText": "Ты погиб в страшных муках" },
+      { "id": 62, "text": "Возвращаешься назад", "questionId": 6, "nextQuestionId": 5, "result": null, "loseText": null }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Ты находишь сундук.",
+    "answers": [
+      { "id": 71, "text": "Открываешь сразу", "questionId": 7, "nextQuestionId": null, "result": "LOSE", "loseText": "Защитный механизм тебя убил" },
+      { "id": 72, "text": "Осматриваешь", "questionId": 7, "nextQuestionId": 8, "result": null, "loseText": null }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Ты обнаруживаешь механизм.",
+    "answers": [
+      { "id": 81, "text": "Обезвреживаешь", "questionId": 8, "nextQuestionId": 9, "result": null, "loseText": null },
+      { "id": 82, "text": "Игнорируешь", "questionId": 8, "nextQuestionId": null, "result": "LOSE", "loseText": "Защитный механизм тебя убил" }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Сундук открыт, внутри сокровище! Но появляется страж.",
+    "answers": [
+      { "id": 91, "text": "Сражаешься", "questionId": 9, "nextQuestionId": null, "result": "LOSE", "loseText": "Ты проиграл в схватке" },
+      { "id": 92, "text": "Убегаешь с сокровищем", "questionId": 9, "nextQuestionId": null, "result": "WIN", "loseText": null },
+      { "id": 93, "text": "Прячешься", "questionId": 9, "nextQuestionId": 10, "result": null, "loseText": null }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Страж проходит мимо.",
+    "answers": [
+      { "id": 101, "text": "Тихо уходишь с сокровищем", "questionId": 10, "nextQuestionId": null, "result": "WIN", "loseText": null },
+      { "id": 102, "text": "Пытаешься украсть больше", "questionId": 10, "nextQuestionId": null, "result": "LOSE", "loseText": "Жадность до добра не доводит" }
+    ]
+  }
+]
