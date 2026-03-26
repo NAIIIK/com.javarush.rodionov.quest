@@ -1,20 +1,17 @@
 package model.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @Setter
 @Getter
-public class Answer implements Entity {
+public class Answer {
     private Long id;
     private String text;
     private Long questionId;
     private Long nextQuestionId;
     private Result result;
     private String loseText;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
 }

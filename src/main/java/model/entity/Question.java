@@ -10,13 +10,8 @@ import java.util.List;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Question implements Entity {
+public class Question {
     private Long id;
     private String text;
     private final List<Answer> answers = new ArrayList<>();
-
-    @Override
-    public Long getId() {
-        return id;
-    }
 }
