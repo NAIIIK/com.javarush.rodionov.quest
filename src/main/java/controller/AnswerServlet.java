@@ -1,5 +1,6 @@
 package controller;
 
+import config.AppContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,7 +14,13 @@ import java.io.IOException;
 
 @WebServlet(name = "AnswerServlet", value = "/answer")
 public class AnswerServlet extends HttpServlet {
-    private final transient QuestService questService = new QuestService();
+    private QuestService questService;
+
+    @Override
+    public void init() {
+        AppContext context = (AppContext) getServletContext().getAttribute("appContext");
+        this.questService = context.getQuestService();
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

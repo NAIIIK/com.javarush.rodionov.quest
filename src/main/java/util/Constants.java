@@ -1,8 +1,8 @@
-package model.util;
+package util;
 
-public final class Util {
+public final class Constants {
 
-    private Util() {}
+    private Constants() {}
 
     public static final String QUESTIONS_FILE_NAME = "castleGame.json";
 }

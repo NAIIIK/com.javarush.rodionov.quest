@@ -1,4 +1,4 @@
-package model.repository;
+package model.repository.mapper;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -7,7 +7,9 @@ import model.entity.Question;
 import java.io.IOException;
 import java.util.List;
 
-public class JsonMapper {
+public class JsonMapper implements Mapper {
+
+    @Override
     public List<Question> mapQuestions(String fileName) {
         ObjectMapper mapper = new ObjectMapper();
 

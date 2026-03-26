@@ -5,10 +5,13 @@ import model.entity.Quest;
 import model.entity.Question;
 import model.entity.Result;
 import model.repository.QuestionRepository;
-import model.util.Util;
 
 public class QuestService {
-    private final QuestionRepository repository = new QuestionRepository(Util.QUESTIONS_FILE_NAME);
+    private final QuestionRepository repository;
+
+    public QuestService(QuestionRepository repository) {
+        this.repository = repository;
+    }
 
     public Quest createNewQuest() {
         Quest quest = new Quest(repository.findAllQuestions());
