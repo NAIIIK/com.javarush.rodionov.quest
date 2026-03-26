@@ -4,10 +4,64 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: grey;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    padding: 12px 24px;       /* same vertical + horizontal as button */
+    width: 250px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.input-field::placeholder {
+    color: #aaa;
+}
+
+.lose-title {
+    margin-bottom: 20px;
+    color: #ff5555;
+}
+
+.win-title {
+    color: green;
 }

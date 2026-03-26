@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-<div>
+<div class="container">
     <h1>Назовись!</h1>
     <form action="${pageContext.request.contextPath}/start" method="post">
-        <input type="text" name="nickname" placeholder="Введите ваш никнейм">
-        <button type="submit">Начать игру</button>
+        <input type="text" name="nickname" placeholder="Введите ваш никнейм" class="input-field">
+        <button type="submit" class="button">Начать игру</button>
     </form>
 </div>
 </body>

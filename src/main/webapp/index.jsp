@@ -8,7 +8,7 @@
 <body>
 <div>
     <h1>Добро пожаловать!</h1>
-    <a href="${pageContext.request.contextPath}/start">Начать игру</a>
+    <a href="${pageContext.request.contextPath}/start" class="button">Начать игру</a>
 </div>
 </body>
 </html>
