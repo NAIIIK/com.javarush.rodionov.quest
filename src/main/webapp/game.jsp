@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-<div>
+<div class="container">
     <c:if test="${quest.over && quest.win}">
         <h1 class="win-title">Победа!</h1>
         <a href="${pageContext.request.contextPath}/start" class="button">Играть снова</a>
