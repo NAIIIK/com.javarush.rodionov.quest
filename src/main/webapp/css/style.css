@@ -44,7 +44,7 @@ body {
 }
 
 .input-field {
-    padding: 12px 24px;       /* same vertical + horizontal as button */
+    padding: 12px 24px;
     width: 250px;
     border: none;
     border-radius: 6px;
