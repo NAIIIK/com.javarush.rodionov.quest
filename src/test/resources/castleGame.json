@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "text": "Ты у ворот замка. Они закрыты. Что предпримешь?",
+    "answers": [
+      { "id": 11, "text": "Сломаешь ворота", "questionId": 1, "nextQuestionId": 2, "result": null, "loseText": null},
+      { "id": 12, "text": "Осмотришься вокруг", "questionId": 1, "nextQuestionId": 3, "result": null, "loseText": null }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ты пытаешься сломать ворота…",
+    "answers": [
+      { "id": 21, "text": "Выбиваешь с ноги", "questionId": 2, "nextQuestionId": 4, "result": null, "loseText": null },
+      { "id": 22, "text": "Выбиваешь с плеча", "questionId": 2, "nextQuestionId": null, "result": "LOSE", "loseText": "Ты сломал плечо и не в состоянии продолжать" }
+    ]
+  }
+]
