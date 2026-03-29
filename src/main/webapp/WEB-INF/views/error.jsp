@@ -8,7 +8,7 @@
 <body>
 <div>
     <h1>Что-то пошло не так...</h1>
-    <a href="${pageContext.request.contextPath}/">Go back</a>
+    <a href="${pageContext.request.contextPath}/">Назад</a>
 </div>
 </body>
 </html>
