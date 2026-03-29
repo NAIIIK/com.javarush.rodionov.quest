@@ -1,7 +1,6 @@
 package controller;
 
 import config.AppContext;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +13,15 @@ import java.io.IOException;
 
 @WebServlet(name = "AnswerServlet", value = "/answer")
 public class AnswerServlet extends HttpServlet {
-    private QuestService questService;
+    private transient QuestService questService;
+
+    //for tomcat
+    public AnswerServlet() {}
+
+    // for tests
+    AnswerServlet(QuestService questService) {
+        this.questService = questService;
+    }
 
     @Override
     public void init() {
@@ -23,7 +30,7 @@ public class AnswerServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Long answerId = Long.parseLong(req.getParameter("answerId"));
         Quest quest = (Quest) req.getSession().getAttribute("quest");
 
@@ -34,7 +41,5 @@ public class AnswerServlet extends HttpServlet {
         }
 
         resp.sendRedirect(req.getContextPath() + "/game");
-
-        // Exception handling in servlets???
     }
 }

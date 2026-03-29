@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -13,5 +12,5 @@ import java.util.List;
 public class Question {
     private Long id;
     private String text;
-    private final List<Answer> answers = new ArrayList<>();
+    private List<Answer> answers;
 }

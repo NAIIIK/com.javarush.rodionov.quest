@@ -7,12 +7,13 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.service.QuestService;
+import util.Constants;
 
 import java.io.IOException;
 
 @WebServlet(name = "StartServlet", value = "/start")
 public class StartServlet extends HttpServlet {
-    private QuestService questService;
+    private transient QuestService questService;
 
     @Override
     public void init() {
@@ -22,26 +23,26 @@ public class StartServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String nickname = (String)  req.getSession().getAttribute("nickname");
+        String nickname = (String)  req.getSession().getAttribute(Constants.NICKNAME_ATTRIBUTE);
 
         if (nickname != null) {
             startNewQuest(req);
             resp.sendRedirect(req.getContextPath() + "/game");
         } else {
-            req.getRequestDispatcher("/start.jsp").forward(req, resp);
+            req.getRequestDispatcher(Constants.START_VIEW).forward(req, resp);
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String nickname = req.getParameter("nickname");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String nickname = req.getParameter(Constants.NICKNAME_ATTRIBUTE);
 
         if (nickname == null || nickname.isBlank()) {
             resp.sendRedirect(req.getContextPath() + "/start");
             return;
         }
 
-        req.getSession().setAttribute("nickname", nickname);
+        req.getSession().setAttribute(Constants.NICKNAME_ATTRIBUTE, nickname);
 
         startNewQuest(req);
 
